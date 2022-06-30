@@ -1,0 +1,487 @@
+<!DOCTYPE html>
+    <html lang="es">
+
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Gamta Hotel</title>
+   
+        <!-- Google Fonts: Marcellus -->
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Marcellus&display=swap" rel="stylesheet">
+
+        <!-- Hoja de estilo CSS -->
+        <link rel="stylesheet" href="estilos.css">
+
+        <!-- Bootstrap CSS -->
+        <link rel="stylesheet" href="css/bootstrap.min.css">
+
+        <!-- Bootstrap Icons -->
+        <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.8.3/font/bootstrap-icons.css">
+
+        <!-- Date Picker Booking Form-->
+        <link rel="stylesheet" href="JQuery/jquery-ui.css">
+        <script src="https://code.jquery.com/jquery-3.6.0.js"></script>
+        <script src="JQuery/jquery-ui.js"></script>
+        <script>
+        $( function() {
+          $( ".datepicker" ).datepicker();
+        } );
+        </script>
+
+        <!-- Thumbnails - Fotorama -->
+        <link  href="https://cdnjs.cloudflare.com/ajax/libs/fotorama/4.6.4/fotorama.css" rel="stylesheet">
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/fotorama/4.6.4/fotorama.js"></script>
+    </head>
+
+    
+    <body style="background-color: #F2F2F2;">
+
+        <!-- Barra de Navegación -->
+        <header>
+        <nav id = "BarraNav" class="navbar navbar-expand-md fixed-top border-3 border-bottom">
+            <div class="container">
+                <a href="index.html" class="navbar-brand">
+                    <img src="img/Logo.png" alt="Logo" width="190" height="54">
+                </a>
+
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#BarraNav" aria-controls="BarraNav" aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                    <i class="fas fa-bars"></i>
+                  </button>
+
+                <div class="collapse navbar-collapse" >
+                    <ul class="navbar-nav text-uppercase">
+                      <li class="nav-item">
+                        <a class="nav-link active" aria-current="page" href="#">Inicio</a>
+                      </li>
+                      <li class="nav-item">
+                        <a class="nav-link" href="#RoomSuites">Habitaciones</a>
+                      </li>
+                      <li class="nav-item">
+                        <a class="nav-link" href="#Restaurante">Restaurante</a>
+                      </li>
+                      <li class="nav-item">
+                        <a class="nav-link" href="#Ubicación">Ubicación</a>
+                      </li>
+                      <li class="nav-item">
+                        <a class="nav-link" href="#Formulario">Contáctate</a>
+                      </li>
+                    </ul>
+                </div>
+
+                <button id="buttom" type="button" class="btn btn-outline text-uppercase">Reservá ya</button>
+            </div>
+        </nav>
+        </header>
+
+        <!-- Hero Unit -->
+        <section class="bgimage">
+            <div class="mask h-100" style="background-color: rgba(0, 0, 0, 0.493);">
+                <div class="container h-50">
+                <div class="row h-100 align-items-center">
+                  <div class="col-12 text-center">
+                    <h1 class="display-2 fw-bold text-uppercase">Respirá hondo</h1>
+                    <p class=" h3 display-7">¡Tus vacacaciones ya llegaron!</p>
+                  </div>
+                </div>
+
+            <!-- Booking Form -->          
+                <div class="container border p-3 bg-light bg-opacity-75">
+                    <form method="post">
+                        <div class="row align-items-center justify-content-center">
+                            <div class="col-md-6 col-lg-2">
+                                <div class="form-group">
+                                    <label>Check-In</label>
+                                    <input type="text" name="date" placeholder="Date:" class="datepicker">
+                                 </div>
+                            </div>
+                            <div class="col-md-6 col-lg-2">
+                                <div class="form-group">
+                                    <label>Check-Out</label>
+                                    <input type="text" name="date" placeholder="Date:" class="datepicker">
+                                </div>
+                            </div>
+                            <div class="col-md-6 col-lg-2">
+                                <div class="form-group">
+                                    <div class="select-option">
+                                        <label>Adultos</label>
+                                        <select>
+                                            <option value="0">0</option>
+                                            <option value="1">1</option>
+                                            <option value="2">2</option>
+                                            <option value="3">3</option>
+                                        </select>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-md-6 col-lg-2">
+                                <div class="form-group">
+                                    <div class="select-option">
+                                        <label>Niños</label>
+                                        <select>
+                                            <option value="0">0</option>
+                                            <option value="1">1</option>
+                                            <option value="2">2</option>
+                                            <option value="3">3</option>
+                                            </select>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-lg-3 margin-15px-top">
+                                <button type="submit" class="butn no-margin-bottom">Ver disponibilidad</button>
+                            </div>
+                        </div>
+                    </form>
+                </div>
+
+                </div>
+            </div>
+            
+        </section>
+        
+        <!-- Gamta´s Values -->
+        <section style="background-color: #AEC8A4;">
+            <div class="container-lg">
+            
+            <div id="Info" class="row text-center p-5">
+                <div class="col-12 col-md-4 mb-3">
+                    <img src="img/Icon-Bienestar.png" alt="Bienestar" height="50" width="50">
+                    <h2 class="h4 fw-semibold text-uppercase">Bienestar</h2>
+                </div>
+
+                <div class="col-12 col-md-4 mb-3">
+                    <img src="img/Icon-Sustentabilidad.png" alt="Sustentabilidad" height="52" width="52">
+                    <h2 class="h4 fw-semibold text-uppercase">Sustentabilidad</h2>
+                </div>
+
+                <div class="col-12 col-md-4 mb-3">
+                    <img src="img/Icon-Arte.png" alt="Arte" height="52" width="52">
+                    <h2 class="h4 fw-semibold text-uppercase">Arte</h2>
+                </div>
+            </div>
+            </div>
+        </section>
+
+        <!--Features-->
+        <section Id = "Features" class="container-lg p-5">
+            <div class="row justify-content-center align-items-center">
+                <div class="col-12 col-xl-6 col-lg-6">
+                    <h2 style = "color: #243B26;" class="fw-bold fs-1 fst-italic">"Un buen descanso es la mitad de la tarea"</h2>
+                    <p class="lead"> Los huépedes del Hotel Gamta pueden descanzar, relajarse y gozar de unas vacaciones inmersos
+                        en la paz, así como también disfrutar de los momentos de arte y naturaleza.  </p>
+                </div>
+                <div class="col-12 col-xl-6 col-lg-6 text-center">   
+                    <img src="img/Vista_1.jpg" alt="Vista">
+                </div>
+            </div>
+        </section>
+        
+        <!-- Statistics -->
+        <section style="background-color: #AEC8A4;">
+            <div class="container p-5">
+                <div class="col-12">
+                    <ul id = "Numbers" class="list-group list-group-horizontal justify-content-center" >
+                        <li class="list-group-item border-0 text-center col-sm-4"><h2>1460</h2> <p class="">huéspedes por año</p> </li>          
+                        <li class="list-group-item border-0 text-center col-sm-4"><h2 >70%</h2> <p>de energía ahorrada</p></li>
+                        <li class="list-group-item border-0 text-center col-sm-4"><h2>4</h2> <p>nuevos hoteles</p> </li>
+                    </ul>
+                </div>
+            </div> 
+        </section>
+        
+        <!-- Who are we? -->
+        <section class="container-lg p-5">
+          <div class="row justify-content-center align-items-center">
+            <div class="col-12 col-xl-6 col-lg-6 text-center">   
+              <img src="img/Exterior3.jpg" alt="Nosotros">
+            </div>
+              <div class="col-12 col-xl-6 col-lg-6">
+                  <h2 style = "color: #243B26;" class="fw-bold fs-1 fst-italic text-end mt-3">¡Conócenos!</h2>
+                  <p class="lead text-end"> Hotel Gamta refleja el arte de la naturaleza en los tiempos modernos. Durante tu estadía, podés aprovechar nuestros cursos de 
+                    cuidado del medio ambiente, recorrer el centro de Pinamar y disfrutá de largos atardeceres en la playa.  
+                    Cada detalle fue especialmente diseñado para que puedas sentirte en casa, el perfecto balance entre el placer y el deber. Tanto los materiales, como las texturas
+                    fueron elegidos para encantar tus sentidos. <br> Ofrecemos servicios de Wi-Fi, piscina climatizada, gimnasio, sauna, salones para eventos y lavandería gratis.</p>
+              </div>
+          </div>
+        </section>
+
+        <!-- Room Suites -->
+        <section id = "RoomSuites" class="container py-5 px-3">
+            <div class="row justify-content-center align-items-center">
+                    <h2 style = "color: #243B26;" class="fw-bold fs-1 fst-bold text-center text-uppercase mb-4">Suites & Rooms </h2>
+                    <p class="lead text-center fst-italic" style="width: 550px;"> Las habitaciones están equipadas con comodidades de última generación 
+                        para que nuestros huépedes gocen de la mejor estadía de sus vidas. </p>
+
+                        <!-- Carrusel Fotorama -->
+                        <div class="row p-4 justify-content-center">
+                        <div class="col-10">
+                          <div class="fotorama"
+                            data-allowfullscreen="native"
+                            data-nav="thumbs">
+                            <img src="img/Capture3.JPG" alt="Habitación Single">
+                            <img src="img/Capture1.JPG" alt="Habitación Doble">
+                            <img src="img/Capture4.JPG" alt="Suite">
+                            <img src="img/Capture5.JPG" alt="Suite sala">
+                            <img src="img/Capture2.JPG" alt="Baño">
+                          </div>
+                        </div>
+                      </div>
+
+            </div> 
+        </section>
+
+        <!-- Medis -->
+        <section id = "Restaurante" style="background-color: #AEC8A4;">
+            <div class="container p-5">
+                <div class="row justify-content-center">
+                    <h2 style = "color: #243B26;" class="fw-bold fs-1 fst-bold text-center text-uppercase mb-3">Medis</h2>
+                    <p class="lead text-center" style="width: 900px; margin-bottom: 30px;"> Medis es el mejor lugar para una comida exquisita y una experiencia relajante. El restaurante
+                        sirve una increible variedad de platos internacionales en un moderno e innovador ambiente.</p>
+
+                <div class="lightbox">
+                    <div class="row">
+                        <div class="col-lg-6">
+                            <img
+                            src="img/Medis3.jpg"
+                            alt="Desayuno"
+                            class="w-100 mb-2 mb-md-4 shadow-1-strong rounded"/>
+                            <img
+                            src="img/Medis2.jpg"
+                            alt="Mesa de Almuerzo"
+                            class="w-100 shadow-1-strong rounded"/>
+                        </div>
+                        <div class="col-lg-6">
+                            <img
+                            src="img/Medis.jpg"
+                            alt="Barra"
+                            class="w-100 shadow-1-strong rounded"/>
+                        </div>
+                    </div>
+                </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Location -->
+        <section id="Ubicación" class="container-lg p-5">
+          <div class="row justify-content-center align-items-center">
+            <h2 class="fw-bold fs-1 fst-bold text-center text-uppercase mb-4" style="color: #243B26;">Nuestra sede principal</h2>
+            <p class="lead text-center" style="width: 900px; margin-bottom: 30px;"> Estamos ubicados cerca del centro de Pinamar, a 10 minutos en auto de la costa. Caminá por las calles serpentinas para descubrir las tiendas 
+              de diseñadores, restaurantes locales y puntos panorámicos del Mar Argentino.</p>
+            <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3181.54437006883!2d-56.887367684768016!3d-37.11596197988476!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x959c9d228e112bdb%3A0xd0937be9160b447f!2sAv.%20Interm%C3%A9danos%20776%2C%20B7167CAV%20Pinamar%2C%20Provincia%20de%20Buenos%20Aires!5e0!3m2!1ses!2sar!4v1656378443365!5m2!1ses!2sar" 
+            width="600" 
+            height="450" 
+            style="border:0;" 
+            allowfullscreen="" 
+            loading="lazy" 
+            referrerpolicy="no-referrer-when-downgrade">
+            </iframe>
+          </div>
+        </section>
+
+        <!-- Formulario de contacto (Dudas, consultas)-->
+        <section id = "Formulario" style="background-color: #AEC8A4;">
+        <div class="container p-5">
+            <div class="row">
+                <div class="col-md-12">
+                    
+                        <form class="form-horizontal" method="post">
+                            <fieldset>
+                                <legend class="header">¿Qué más te gustaría saber?</legend>
+        
+                                <div class="form-group">
+                                    <span class="col-md-1 col-md-offset-2 text-center"><i class="fa fa-user bigicon"></i></span>
+                                    <div class="col-md-8">
+                                        <input id="fname" name="name" type="text" placeholder="Nombre" class="form-control">
+                                    </div>
+                                </div>
+
+                                <div class="form-group">
+                                    <span class="col-md-1 col-md-offset-2 text-center"><i class="fa fa-user bigicon"></i></span>
+                                    <div class="col-md-8">
+                                        <input id="lname" name="name" type="text" placeholder="Apellido" class="form-control">
+                                    </div>
+                                </div>
+        
+                                <div class="form-group">
+                                    <span class="col-md-1 col-md-offset-2 text-center"><i class="fa fa-envelope-o bigicon"></i></span>
+                                    <div class="col-md-8">
+                                        <input id="email" name="email" type="text" placeholder="Correo electrónico" class="form-control">
+                                    </div>
+                                </div>
+        
+                                <div class="form-group">
+                                    <span class="col-md-1 col-md-offset-2 text-center"><i class="fa fa-phone-square bigicon"></i></span>
+                                    <div class="col-md-8">
+                                        <input id="phone" name="phone" type="text" placeholder="Teléfono" class="form-control">
+                                    </div>
+                                </div>
+        
+                                <div class="form-group">
+                                    <span class="col-md-1 col-md-offset-2 text-center"><i class="fa fa-pencil-square-o bigicon"></i></span>
+                                    <div class="col-md-8">
+                                        <textarea class="form-control" id="message" name="message" placeholder="Ingresá tu mensaje aquí y te contestaremos lo antes posible." rows="7"></textarea>
+                                    </div>
+                                </div>
+        
+                                <div class="form-group">
+                                    <div class="col-md-12 text-center">
+                                        <button type="submit" class="btn btn-lg mt-3" style="background-color: #F2F2F2; color: #243B26">Enviar</button>
+                                    </div>
+                                </div>
+                            
+                            </fieldset>
+                        </form>
+
+                </div>
+            </div>
+        </div>
+        </section>
+
+        <!-- Pie de página -->
+        <footer class="text-center text-lg-start">
+            <div class="container p-4 border-top">
+              <div class="row">
+                <div class="col-lg-3 col-md-6 mb-4 mb-md-0">
+                  <h5 class="text-uppercase fw-bold">Central de Reservas</h5>
+          
+                  <ul class="list-unstyled mb-0">
+                    <li>
+                      <a href="#!" class="text-dark">Argentina 0800 123 4567</a>
+                    </li>
+                    <li>
+                      <a href="#!" class="text-dark">Brasil 0801 765 4321</a>
+                    </li>
+                    <li>
+                      <a href="#!" class="text-dark">Uruguay 000 111 002 3456</a>
+                    </li>
+                    <li>
+                      <a href="#!" class="text-dark">Otros países (011) 754 0001</a>
+                    </li>
+                  </ul>
+                </div>
+
+                <div class="col-lg-3 col-md-6 mb-4 mb-md-0">
+                  <h5 class="text-uppercase mb-0 fw-bold">Términos y políticas</h5>
+          
+                  <ul class="list-unstyled">
+                    <li>
+                      <a href="#!" class="text-dark">Aviso de privacidad</a>
+                    </li>
+                    <li>
+                      <a href="#!" class="text-dark">Términos de uso</a>
+                    </li>
+                    <li>
+                      <a href="#!" class="text-dark">Aceptación de cookies</a>
+                    </li>
+                  </ul>
+                </div>
+
+                <div class="col-lg-3 col-md-6 mb-4 mb-md-0">
+                  <h5 class="text-uppercase fw-bold">Asesoramientos</h5>
+          
+                  <ul class="list-unstyled mb-0">
+                    <li>
+                      <a href="#!" class="text-dark">Viajes corporativos</a>
+                    </li>
+                    <li>
+                      <a href="#!" class="text-dark">Viajes en grupo</a>
+                    </li>
+                    <li>
+                      <a href="#!" class="text-dark">Reuniones</a>
+                    </li>
+                  </ul>
+                </div>
+
+                <div class="col-lg-3 col-md-6 mb-4 mb-md-0">
+                  <h5 class="text-uppercase mb-0 fw-bold">Contáctanos</h5>
+          
+                  <ul class="list-unstyled">
+                    <li>
+                      <a href="#!" class="text-dark">Atención al cliente</a>
+                    </li>
+                  </ul>
+                </div>
+              </div>
+            </div>
+
+            <section class="mb-4">
+              <div class="container pt-2">
+              <div class="text-center text-white" style="background-color: #f2f2f2;">
+
+                    <a
+                      class="btn btn-link btn-floating btn-lg text-dark m-1"
+                      href="#!"
+                      role="button"
+                      data-mdb-ripple-color="dark"> 
+                      
+                      <i class="bi bi-facebook"></i>
+                    </a>
+              
+                    <a
+                      class="btn btn-link btn-floating btn-lg text-dark m-1"
+                      href="#!"
+                      role="button"
+                      data-mdb-ripple-color="dark">
+                      <i class="bi bi-twitter"></i>
+                    </a>
+              
+                    <a
+                      class="btn btn-link btn-floating btn-lg text-dark m-1"
+                      href="#!"
+                      role="button"
+                      data-mdb-ripple-color="dark">
+                      <i class="bi bi-google"></i>
+                    </a>
+              
+                    <a
+                      class="btn btn-link btn-floating btn-lg text-dark m-1"
+                      href="#!"
+                      role="button"
+                      data-mdb-ripple-color="dark">
+                      <i class="bi bi-instagram"></i>
+                    </a>
+
+                    <a
+                      class="btn btn-link btn-floating btn-lg text-dark m-1"
+                      href="#!"
+                      role="button"
+                      data-mdb-ripple-color="dark">
+                      <i class="bi bi-linkedin"></i>
+                    </a>
+                
+              </div>
+              </div>
+            </section>
+                
+          
+        <!-- Copyright -->
+          <div class="text-center p-3" style="color:#F2F2F2; background-color:  #243B26;">
+            © 2022 Copyright:
+              <a class="text-uppercase" style="color:#F2F2F2" href="#">D'Astolfo Valentina</a>
+          </div>
+
+        </footer>
+
+        
+    <!-- JavaScript -->
+    <script src="js/bootstrap.bundle.min.js"></script>
+
+    <!--Función para BarraNav sea transparente
+    <script>
+        var nav = document.querySelector ("nav");
+            window.addEventListener ("scroll", function(){
+                if (window.pageXOffset > 100){
+                    nav.classList.add ("background: #AEC8A4  !important", "shadow");
+                } else { 
+                   // nav.classList.remove ("background: transparent !important", "shadow");
+                }
+            })
+    </script>-->
+
+    </body> 
+    
+    </html>
