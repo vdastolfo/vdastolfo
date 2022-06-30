@@ -1,0 +1,65 @@
+*{
+  font-family: 'Marcellus', serif;
+}
+
+#BarraNav{
+    background-color: #F2F2F2;
+    color: #243B26;
+    border: #243B26;
+    
+}
+
+#buttom{
+    border-color: #243B26;
+    border-style: solid;
+    color: #243B26;
+    justify-content: end;
+
+}
+
+.bgimage {
+    width: 100%;
+    height: 800px;
+    background: url('img/Exterior2.jpg');
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    background-attachment: fixed;
+    
+    
+  }
+
+  .bgimage h1 {
+    color:#F2F2F2;
+    text-shadow:2px 2px #333;
+    justify-content: center;
+  }  
+
+  .bgimage p{
+    color: #F2F2F2;
+    text-shadow:2px 2px #333;
+  }
+  
+#Info{
+  justify-content: center;
+}
+
+#info h2 {
+  color: #243B26;
+  }
+
+#Numbers li {
+  background-color: #AEC8A4
+}
+
+  #Numbers h2{
+    color: #243B26;
+    font-weight: bolder;
+    font-size: 50px;
+  } 
+
+  #Numbers p{
+    color: #243B26;
+    font-weight: bold;
+    font-size: 25px;
+  }
